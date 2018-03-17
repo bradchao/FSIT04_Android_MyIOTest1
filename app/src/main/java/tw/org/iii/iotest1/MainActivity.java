@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private SharedPreferences sp;
@@ -33,5 +34,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void test2(View view) {
+        editor.putString("name", "brad");
+        editor.putBoolean("sound", false);
+        editor.commit();
+        Toast.makeText(this, "Save OK",
+                Toast.LENGTH_SHORT).show();
+    }
+
+    public void test3(View view) {
+    }
+    public void test4(View view) {
     }
 }
